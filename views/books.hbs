@@ -1,0 +1,26 @@
+
+<div class="formBook">
+    <h1>{{title}}</h1>
+    <div class="groupBook">
+        {{#each data}}
+            <div class="itemBook">
+                <h2>{{title}}</h2>
+                <p>{{author}}</p>
+                {{#if inStock}}
+                    <p class="priceBook">{{price}}</p>
+                {{else}}
+                    <p class="messageWarning">Out of stock</p>
+                {{/if}}
+            </div>
+        {{else}}
+            <!--Tactic Fix for Grid-->
+            <p></p>
+            <p >{{message}}</p>
+            <p></p>
+
+            <p></p>
+            <a href="/"><-Return</a>
+            <p></p>
+        {{/each}}
+    </div>
+</div>
